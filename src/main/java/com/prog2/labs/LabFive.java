@@ -41,15 +41,19 @@ public class LabFive {
 	}
 
 	/**
-	 * 2) Given an integer array nums of length n and an integer target, find three
-	 * integers in nums such that the sum is closest to target. Return the sum of
-	 * the three integers. You may assume that each input would have exactly one
-	 * solution.
+	 * 2) One way to generate a magic square of size n, when n is odd is to assign 
+	 * the integers 1 to n^2 in ascending order, starting at the bottom, middle cell. 
+	 * Repeatedly assign the next integer to the cell adjacent diagonally to the right 
+	 * and down. If this cell has already been assigned another integer, instead use 
+	 * the cell adjacently above. If the new column is outside the square start back 
+	 * at the first column. If the new row is outside the square, start back at the 
+	 * beginning of the row. 
 	 * 
-	 * @param nums   the input array.
-	 * @param target the target number.
+	 * Write a Java method to generate a magic square of a given odd size.
+	 * 
+	 * @param arraySize the array size. 
 	 *
-	 * @return result the closest number to sum of 3.
+	 * @return result the magic square created based on the array size.
 	 */
 
 	public int[][] magicSquareGenerator(int arraySize) {
